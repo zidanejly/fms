@@ -1,0 +1,30 @@
+package com.jfhealthcare.common.enums;
+
+public enum MQTargetEnum {
+	FILE_UPLOAD_SUCCESS_TARGET("fupSucResult", "MQ文件上传成功的target"), 
+	FILE_UPLOAD_FAIL_TARGET("fupFailResult","MQ文件上传失败的target");
+
+	private String target;
+	private String message;
+
+	private MQTargetEnum(String target, String message) {
+		this.target = target;
+		this.message = message;
+	}
+
+	public String getTarget() {
+		return target;
+	}
+
+	public void setTarget(String target) {
+		this.target = target;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jfhealthcare.modules.system.mapper.SysClientVersionMapper" >
+  <resultMap id="BaseResultMap" type="com.jfhealthcare.modules.system.entity.SysClientVersion" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="version" property="version" jdbcType="VARCHAR" />
+    <result column="update_url" property="updateUrl" jdbcType="VARCHAR" />
+    <result column="signature" property="signature" jdbcType="VARCHAR" />
+    <result column="exec" property="exec" jdbcType="VARCHAR" />
+    <result column="os" property="os" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="zip" property="zip" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="selectLatestClientVersionInfo" resultMap="BaseResultMap" parameterType="String">
+		SELECT *
+		FROM
+		sys_client_version 
+		<where>
+			exec=#{exec,jdbcType=VARCHAR}
+			and os=#{os,jdbcType=VARCHAR}
+		</where>
+		ORDER BY create_time desc
+		LIMIT 1 ;
+	</select>
+</mapper>
