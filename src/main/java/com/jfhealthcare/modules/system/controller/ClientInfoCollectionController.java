@@ -30,8 +30,8 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/v1/picl/info")
 @Api(value = "客户端信息收集")
 public class ClientInfoCollectionController{
-	@Autowired
-	private MqProductServiceImpl mqProductServiceImpl;
+	//@Autowired
+	//private MqProductServiceImpl mqProductServiceImpl;
 	@Autowired
 	private SysLogService sysLogService;
 	
@@ -53,11 +53,11 @@ public class ClientInfoCollectionController{
 				sysLogService.addLog(sl);
 			}else{
 				//发送MQ信息给客户端
-				HashMap<String,Object> mp = new HashMap<String,Object>();
+				/*HashMap<String,Object> mp = new HashMap<String,Object>();
 				mp.put("code", cic.getCode());
 				mp.put("message",cic.getMessage());
 				mp.put("level",cic.getLevel());
-				mqProductServiceImpl.sendMessage(JSONObject.toJSONString(mp), MQTopicEnum.FILE_UPLOAD_TOPIC, MQTargetEnum.FILE_UPLOAD_FAIL_TARGET);
+				mqProductServiceImpl.sendMessage(JSONObject.toJSONString(mp), MQTopicEnum.FILE_UPLOAD_TOPIC, MQTargetEnum.FILE_UPLOAD_FAIL_TARGET);*/
 			}
 			return BaseResponse.getSuccessResponse("成功!");
 		} catch (Exception e) {

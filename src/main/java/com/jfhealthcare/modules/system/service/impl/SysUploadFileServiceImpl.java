@@ -46,8 +46,8 @@ public class SysUploadFileServiceImpl implements SysUploadFileService {
 	private UploadFileToDicomUtil uploadFileToDicomUtil;
 	@Autowired
 	private DealFileUploadResponseUtil dealFileUploadResponseUtil;
-	@Autowired
-	private MqProductServiceImpl mqProductServiceImpl;
+	//@Autowired
+	//private MqProductServiceImpl mqProductServiceImpl;
 
 	@Override
 	public SysUploadFile queryFileStatus(String hash) {
@@ -132,9 +132,9 @@ public class SysUploadFileServiceImpl implements SysUploadFileService {
 					throw new UploadFileToDicomException("上传业务失败,失败返回码409");
 				}
 				// resultJsonToFum 返回202时
-				mqProductServiceImpl.sendMessage(
+				/*mqProductServiceImpl.sendMessage(
 						JSONObject.toJSONString(dealFileUploadResponseUtil.getMessageMap(fum, userId)),
-						MQTopicEnum.FILE_UPLOAD_TOPIC, MQTargetEnum.FILE_UPLOAD_SUCCESS_TARGET);
+						MQTopicEnum.FILE_UPLOAD_TOPIC, MQTargetEnum.FILE_UPLOAD_SUCCESS_TARGET);*/
 				updateFileStatus(userId, queryFileStatus, FileStatusEnum.FILE_STATUS_2.getCode());
 				return true;
 			}
