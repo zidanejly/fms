@@ -39,7 +39,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("/v1/picl/dcm")
+@RequestMapping("/v1/piclHis/dcm")
 @Api(value = "文件断点上传")
 public class UploadFileToArcController {
 	@Value("${uploadFilePath}")

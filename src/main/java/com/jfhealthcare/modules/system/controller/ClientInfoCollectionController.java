@@ -27,7 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("/v1/picl/info")
+@RequestMapping("/v1/piclHis/info")
 @Api(value = "客户端信息收集")
 public class ClientInfoCollectionController{
 	//@Autowired

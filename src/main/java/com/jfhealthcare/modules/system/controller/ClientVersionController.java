@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("/v1/picl/client-ver")
+@RequestMapping("/v1/piclHis/client-ver")
 @Api(value = "客户端版本信息")
 public class ClientVersionController {
 	@Autowired
