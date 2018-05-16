@@ -27,11 +27,11 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("/v1/piclHis/info")
+@RequestMapping("/v1/picl/info")
 @Api(value = "客户端信息收集")
 public class ClientInfoCollectionController{
-	//@Autowired
-	//private MqProductServiceImpl mqProductServiceImpl;
+	/*@Autowired
+	private MqProductServiceImpl mqProductServiceImpl;*/
 	@Autowired
 	private SysLogService sysLogService;
 	

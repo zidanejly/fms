@@ -9,10 +9,16 @@ import com.aliyun.openservices.ons.api.MessageListener;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Component
-@Slf4j
+/*@Component
+@Slf4j*/
 public class MqConsumer4UploadFileListener implements MessageListener {
+
 	@Override
+	public Action consume(Message message, ConsumeContext context) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	/*@Override
 	public Action consume(Message message, ConsumeContext context) {
 		try {
 			byte[] body = message.getBody();
@@ -26,6 +32,6 @@ public class MqConsumer4UploadFileListener implements MessageListener {
 			log.info("接受消息失败!");
 			return Action.ReconsumeLater;
 		}
-	}
+	}*/
 
 }

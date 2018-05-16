@@ -14,10 +14,16 @@ import com.jfhealthcare.modules.system.service.MqProductService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
-@Service
+/*@Slf4j
+@Service*/
 public class MqProductServiceImpl implements MqProductService {
-	@Autowired
+
+	@Override
+	public void sendMessage(String message, MQTopicEnum mqEnum, MQTargetEnum target) {
+		// TODO Auto-generated method stub
+		
+	}
+	/*@Autowired
 	private Producer producer;
 
 	@Override
@@ -40,6 +46,6 @@ public class MqProductServiceImpl implements MqProductService {
 		SendResult sendResult = producer.send(msg);
 		log.info("Send Message success. Message ID is: " + sendResult.getMessageId());
 
-	}
+	}*/
 
 }

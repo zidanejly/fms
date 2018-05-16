@@ -17,9 +17,9 @@ import com.jfhealthcare.listener.MqConsumer4UploadFileListener;
 /**
  * 阿里MQ的配置项
  */
-@Configuration
+//@Configuration
 public class MQConfig {
-	@Value("${ali_productId}")
+	/*@Value("${ali_productId}")
 	private String productId;
 	@Value("${ali_consumerId}")
 	private String consumerId;
@@ -52,7 +52,7 @@ public class MQConfig {
 		return producer;
 	}
 
-	/*@Bean
+	@Bean
 	public Consumer consumer() {
 		Properties properties = new Properties();
 		// 您在MQ控制台创建的Consumer ID

@@ -46,8 +46,8 @@ public class SysUploadFileServiceImpl implements SysUploadFileService {
 	private UploadFileToDicomUtil uploadFileToDicomUtil;
 	@Autowired
 	private DealFileUploadResponseUtil dealFileUploadResponseUtil;
-	//@Autowired
-	//private MqProductServiceImpl mqProductServiceImpl;
+	/*@Autowired
+	private MqProductServiceImpl mqProductServiceImpl;*/
 
 	@Override
 	public SysUploadFile queryFileStatus(String hash) {
