@@ -1,12 +1,19 @@
 package com.jfhealthcare.common.enums;
 
 public enum MQTopicEnum {
-	//Boss
-	FILE_UPLOAD_TOPIC("ArchiveResult", "MQ文件上传TOPIC");
-	//Test
-	//FILE_UPLOAD_TOPIC("DcmMessage","MQ文件上传TOPIC");
-	//DEMO
-	//FILE_UPLOAD_TOPIC("DemoRmis","MQ文件上传TOPIC");
+
+	// PRO
+	// FILE_UPLOAD_TOPIC("ArchiveResult", "MQ文件上传TOPIC");
+	// Test
+	// FILE_UPLOAD_TOPIC("DcmMessage","MQ文件上传TOPIC");
+	// DEMO
+	// FILE_UPLOAD_TOPIC("DemoRmis","MQ文件上传TOPIC");
+	// FEIJIEHE
+	   FILE_UPLOAD_TOPIC("DemoArchive", "MQ文件上传TOPIC");
+	// FEIJIEHE BIAOZHU
+	// FILE_UPLOAD_TOPIC("AnnotationArchive", "MQ文件上传TOPIC");
+	// History
+	// FILE_UPLOAD_TOPIC("NOTHING", "历史没有MQ");
 
 	private String topic;
 	private String message;
