@@ -233,7 +233,7 @@ public class UploadFileToArcController {
 		SysUploadFile queryFileStatus = sysUploadFileService.queryFileStatus(paramters.getHash());
 		if (queryFileStatus != null && queryFileStatus.getFileStatus() == FileStatusEnum.FILE_STATUS_1.getCode()) {
 			// 文件已经上传，等待DCM服务器响应
-			long time = new Date().getTime();
+			long time = System.currentTimeMillis();
 			if (time - queryFileStatus.getUpdateTime().getTime() < (Long.parseLong(retryTime))) {
 				// 相隔时间小于5分钟
 				return getUploadResponse(paramters.getHash(), FileUploadResponseCodeEnum.ERROR_CODE_201.getCode(),
