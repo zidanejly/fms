@@ -13,8 +13,9 @@ public enum MQTopicEnum {
 	//FEIJIEHE BIAOZHU
 	//FILE_UPLOAD_TOPIC("AnnotationArchive", "MQ文件上传TOPIC");
 	//History
-	
-	FILE_UPLOAD_TOPIC("NOTHING","历史没有MQ");
+	//FILE_UPLOAD_TOPIC("NOTHING","历史没有MQ");
+	//test4Docker
+	FILE_UPLOAD_TOPIC("NOTHING","test4Docker没有MQ");
 
 	private String topic;
 	private String message;
